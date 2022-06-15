@@ -2,6 +2,8 @@ service: users-api
 
 frameworkVersion: "2"
 
+useDotenv: true
+
 provider:
   name: aws
   runtime: nodejs12.x
