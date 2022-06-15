@@ -6,15 +6,15 @@ useDotenv: true
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   lambdaHashingVersion: "20201221"
 
 functions:
-  hello:
-    handler: handler.hello
+  getUser:
+    handler: src/Lambdas/getUser.handler
     events:
       - http:
-          path: /
+          path: /user/{id}
           method: get
 
 plugins:
